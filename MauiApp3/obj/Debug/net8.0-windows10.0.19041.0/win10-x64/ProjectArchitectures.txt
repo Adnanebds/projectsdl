@@ -1,0 +1,1 @@
+C:\Users\kenki\source\repos\MauiApp3\MauiApp3\MauiApp3.csproj;x64

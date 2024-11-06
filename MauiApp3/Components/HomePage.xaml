@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Components.HomePage"
+             Title="Home Page">
+
+    <StackLayout Padding="20">
+        <Button x:Name="NavigateButton"
+                Text="Go to Login Page"
+                HorizontalOptions="Center"
+                Clicked="NavigateToLoginPage" />
+    </StackLayout>
+
+</ContentPage>
