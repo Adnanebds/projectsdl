@@ -9,6 +9,11 @@
                 Text="Go to Login Page"
                 HorizontalOptions="Center"
                 Clicked="NavigateToLoginPage" />
+
+        <Button x:Name="WelcomeButton"
+                Text="Go to Welcome Page"
+                HorizontalOptions="Center"
+                Clicked="NavigateToWelcomePage" />
     </StackLayout>
 
 </ContentPage>

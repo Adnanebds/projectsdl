@@ -16,5 +16,12 @@ namespace MauiApp3.Components
             // Navigate to LoginPage
             await Navigation.PushAsync(new LoginPage());
         }
+
+
+        private async void NavigateToWelcomePage(object sender, EventArgs e)
+        {
+            // Navigate to LoginPage
+            await Navigation.PushAsync(new Welcome());
+        }
     }
 }

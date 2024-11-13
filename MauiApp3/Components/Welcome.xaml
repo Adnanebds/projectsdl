@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Components.Welcome"
+             Title="Empty State"
+             BackgroundColor="#F7F8FA">
+
+    <ContentPage.Content>
+        <Grid Padding="20" RowSpacing="10">
+
+            <!-- Define Row Definitions for structure -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <!-- Header -->
+                <RowDefinition Height="Auto" />
+                <!-- Search and Filter -->
+                <RowDefinition Height="*" />
+                <!-- CollectionView -->
+                <RowDefinition Height="70" />
+                <!-- Bottom Navigation -->
+            </Grid.RowDefinitions>
+
+            <!-- Header Section -->
+            <StackLayout Grid.Row="0" Orientation="Vertical" Padding="0,10,0,10">
+                <Label Text="Empty State" FontSize="16" FontAttributes="Bold"/>
+                <Label Text="Spots" FontSize="24" FontAttributes="Bold" Margin="0,5,0,10"/>
+            </StackLayout>
+
+            <!-- Search and Filter Section -->
+            <Grid Grid.Row="1" ColumnDefinitions="*,Auto,Auto" Margin="0,10,0,10">
+                <SearchBar Placeholder="Search" HorizontalOptions="FillAndExpand" Margin="0,0,10,0" HeightRequest="40" />
+                <Button Text="Sorteren" WidthRequest="100" FontSize="14" HorizontalOptions="End" />
+                <Button Text="Filter (2)" WidthRequest="80" FontSize="14" HorizontalOptions="End" BackgroundColor="Transparent" />
+            </Grid>
+
+            <!-- Items Grid Section -->
+            <CollectionView Grid.Row="2" Margin="0,10,0,10">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="8" Margin="5" BackgroundColor="#E8E8F1" HeightRequest="100" WidthRequest="100">
+                            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Image Source="placeholder_image.png" WidthRequest="40" HeightRequest="40"/>
+                                <Label Text="{Binding}" HorizontalTextAlignment="Center" FontSize="12" Margin="0,5,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+                <!-- Sample Items -->
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Metalen plaat</x:String>
+                        <x:String>Metaal voor auto</x:String>
+                        <x:String>Auto motor</x:String>
+                        <x:String>Plastic</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+            </CollectionView>
+
+            <!-- Bottom Navigation Bar -->
+            <Grid Grid.Row="3" BackgroundColor="White" HeightRequest="70" Padding="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Bottom Navigation Icons -->
+                <StackLayout Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="explorelogo.png" HeightRequest="24" WidthRequest="24" />
+                    <Label Text="Explore" FontSize="10" HorizontalTextAlignment="Center" TextColor="#9CA3AF" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="foursquares.png" HeightRequest="24" WidthRequest="24" />
+                    <Label Text="Spots" FontSize="10" HorizontalTextAlignment="Center" TextColor="#000000" FontAttributes="Bold" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="profile1.png" HeightRequest="24" WidthRequest="24" />
+                    <Label Text="Profile" FontSize="10" HorizontalTextAlignment="Center" TextColor="#9CA3AF" />
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
