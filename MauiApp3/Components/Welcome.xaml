@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp3.Components.Welcome"
@@ -27,16 +26,25 @@
             </StackLayout>
 
             <!-- Search and Filter Section -->
-            <Grid Grid.Row="1" ColumnDefinitions="*,Auto,Auto" Margin="0,10,0,10">
-                <SearchBar Placeholder="Search" HorizontalOptions="FillAndExpand" Margin="0,0,10,0" HeightRequest="40" />
-                <Button Text="Sorteren" WidthRequest="100" FontSize="14" HorizontalOptions="End" />
-                <Button Text="Filter (2)" WidthRequest="80" FontSize="14" HorizontalOptions="End" BackgroundColor="Transparent" />
-            </Grid>
+            <HorizontalStackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand" Spacing="10" Margin="0,10,0,10">
+
+                <!-- Sort Button -->
+                <Button Text="Sorteren" WidthRequest="120" FontSize="14" HorizontalOptions="Start" VerticalOptions="Center" Clicked="OnSortButtonClicked"/>
+
+                <!-- Search Bar (Centered) -->
+                <SearchBar Placeholder="Search" HorizontalOptions="FillAndExpand" HeightRequest="40" />
+
+                <!-- Filter Button -->
+                <Button Text="Filter (2)" WidthRequest="80" FontSize="14" HorizontalOptions="End" VerticalOptions="Center" 
+                        BackgroundColor="Transparent" Clicked="OnFilterButtonClicked"/>
+
+            </HorizontalStackLayout>
 
             <!-- Items Grid Section -->
             <CollectionView Grid.Row="2" Margin="0,10,0,10">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                    <!-- Vertical Layout, Cards will scroll one by one -->
+                    <GridItemsLayout Orientation="Vertical" Span="1"/>
                 </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>
