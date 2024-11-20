@@ -40,6 +40,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = MauiApp3.Components.LoginP
 build_metadata.AdditionalFiles.TargetPath = Components\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Components\LoginPage.xaml
 
+[C:/Users/yassi/source/repos/projectsdl/projectsdl/MauiApp3/Components/Map.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp3.Components.Map.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\Map.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\Map.xaml
+
+[C:/Users/yassi/source/repos/projectsdl/projectsdl/MauiApp3/Components/SpotAanmaken.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp3.Components.SpotAanmaken.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\SpotAanmaken.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\SpotAanmaken.xaml
+
 [C:/Users/yassi/source/repos/projectsdl/projectsdl/MauiApp3/Components/Welcome.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MauiApp3.Components.Welcome.xaml

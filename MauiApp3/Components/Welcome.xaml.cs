@@ -11,6 +11,21 @@ namespace MauiApp3.Components
             InitializeComponent();
         }
 
+
+        private async void OnFoursquaresTapped(object sender, EventArgs e)
+        {
+            // Navigate to SpotAanmaken.xaml
+            await Navigation.PushModalAsync(new SpotAanmaken());
+        }
+
+
+        private async void OnMapTapped(object sender, EventArgs e)
+        {
+            // Navigate to the Map page
+            await Navigation.PushAsync(new Map());
+        }
+
+
         // Sort Button Clicked Event
         private async void OnSortButtonClicked(object sender, EventArgs e)
         {
@@ -57,4 +72,7 @@ namespace MauiApp3.Components
             }
         }
     }
+
+
+
 }

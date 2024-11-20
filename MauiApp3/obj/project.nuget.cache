@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UoaYW43PH+Y=",
+  "dgSpecHash": "GqO1vqrxj8E=",
   "success": true,
   "projectFilePath": "C:\\Users\\yassi\\source\\repos\\projectsdl\\projectsdl\\MauiApp3\\MauiApp3.csproj",
   "expectedPackageFiles": [
@@ -20,11 +20,13 @@
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.82\\microsoft.maui.controls.build.tasks.8.0.82.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.controls.compatibility\\8.0.82\\microsoft.maui.controls.compatibility.8.0.82.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.controls.core\\8.0.82\\microsoft.maui.controls.core.8.0.82.nupkg.sha512",
+    "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.controls.maps\\9.0.10\\microsoft.maui.controls.maps.9.0.10.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.controls.xaml\\8.0.82\\microsoft.maui.controls.xaml.8.0.82.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.core\\8.0.82\\microsoft.maui.core.8.0.82.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.essentials\\8.0.82\\microsoft.maui.essentials.8.0.82.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.graphics\\8.0.82\\microsoft.maui.graphics.8.0.82.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\8.0.82\\microsoft.maui.graphics.win2d.winui.desktop.8.0.82.nupkg.sha512",
+    "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.maps\\9.0.10\\microsoft.maui.maps.9.0.10.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.82\\microsoft.maui.resizetizer.8.0.82.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.8\\microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",

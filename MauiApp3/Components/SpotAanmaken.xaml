@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Components.SpotAanmaken"
+             Title="Spot Aanmaken"
+             BackgroundColor="#F7F8FA">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Image Carousel -->
+            <Frame CornerRadius="10" Padding="0" HeightRequest="200">
+                <Grid>
+                    <CarouselView x:Name="ImageCarousel" ItemsSource="{Binding Images}" Loop="False" IndicatorView="ImageIndicator">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding .}" Aspect="AspectFill"/>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                        <CarouselView.EmptyView>
+                            <Grid BackgroundColor="LightBlue">
+                                <Label Text="No Images" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Grid>
+                        </CarouselView.EmptyView>
+                    </CarouselView>
+                    <Button Text="+" FontSize="40" BackgroundColor="Transparent" 
+                            Clicked="OnAddImageClicked" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Grid>
+            </Frame>
+            <IndicatorView x:Name="ImageIndicator" IndicatorColor="LightGray" SelectedIndicatorColor="DarkGray"
+                           HorizontalOptions="Center"/>
+
+            <!-- Product Title -->
+            <Label Text="Product Titel" FontAttributes="Bold" FontSize="24" TextColor="Black"/>
+            <Entry Placeholder="Voer de productnaam in" FontSize="18"/>
+
+            <!-- Product Description -->
+            <Label Text="Korte Beschrijving" FontAttributes="Bold" FontSize="16"/>
+            <Editor Placeholder="Beschrijf het product" HeightRequest="100"/>
+
+            <!-- Product Category -->
+            <Label Text="Categorie" FontAttributes="Bold" FontSize="16"/>
+            <Picker Title="Selecteer categorie" ItemsSource="{Binding Categories}" />
+
+            <!-- Add Product Button -->
+            <Button Text="+" FontSize="24" BackgroundColor="#007AFF" TextColor="White" 
+                    CornerRadius="30" HeightRequest="60" WidthRequest="60"
+                    HorizontalOptions="Center" Clicked="OnAddProductClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
