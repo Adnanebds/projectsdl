@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace MauiApp3.Components
 {
@@ -10,33 +11,50 @@ namespace MauiApp3.Components
             InitializeComponent();
         }
 
-        private void OnFilterButtonClicked(object sender, EventArgs e)
+        // Sort Button Clicked Event
+        private async void OnSortButtonClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Filter", "Filter button clicked!", "OK");
-        }
+            // Display the dropdown with sorting options (Date, Reviews)
+            var action = await DisplayActionSheet("Sort Options", "Cancel", null, "Date", "Reviews");
 
-        private void OnSortPickerSelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (sender is Picker picker)
+            if (action == "Date")
             {
-                string selectedOption = picker.SelectedItem?.ToString() ?? "None";
-                DisplayAlert("Sort", $"Sorted by: {selectedOption}", "OK");
+                // Add logic for Date sorting
+                await DisplayAlert("Sort", "Sorting by Date", "OK");
+                // Call your sorting logic for Date here
+            }
+            else if (action == "Reviews")
+            {
+                // Add logic for Reviews sorting
+                await DisplayAlert("Sort", "Sorting by Reviews", "OK");
+                // Call your sorting logic for Reviews here
+            }
+            else
+            {
+                // Option was Cancelled
+                await DisplayAlert("Sort", "Sort cancelled", "OK");
             }
         }
 
-        private async void OnExploreButtonClicked(object sender, EventArgs e)
+        // Filter Button Clicked Event
+        private async void OnFilterButtonClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Explore", "Explore button clicked!", "OK");
-        }
-
-        private async void OnSpotsButtonClicked(object sender, EventArgs e)
-        {
-            await DisplayAlert("Spots", "Spots button clicked!", "OK");
-        }
-
-        private async void OnProfileButtonClicked(object sender, EventArgs e)
-        {
-            await DisplayAlert("Profile", "Profile button clicked!", "OK");
+            var action = await DisplayActionSheet("Filter Options", "Cancel", null, "Filter 1", "Filter 2", "Filter 3");
+            if (action == "Filter 1")
+            {
+                // Add logic for Filter 1
+                await DisplayAlert("Filter", "Filter 1 selected", "OK");
+            }
+            else if (action == "Filter 2")
+            {
+                // Add logic for Filter 2
+                await DisplayAlert("Filter", "Filter 2 selected", "OK");
+            }
+            else if (action == "Filter 3")
+            {
+                // Add logic for Filter 3
+                await DisplayAlert("Filter", "Filter 3 selected", "OK");
+            }
         }
     }
 }

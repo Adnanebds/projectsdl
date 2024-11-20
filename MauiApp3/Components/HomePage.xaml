@@ -15,5 +15,6 @@
                 HorizontalOptions="Center"
                 Clicked="NavigateToWelcomePage" />
     </StackLayout>
+	
 
-</ContentPage>
+</ContentPage>  

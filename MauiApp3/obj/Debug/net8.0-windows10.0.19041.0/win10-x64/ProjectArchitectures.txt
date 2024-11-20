@@ -1,1 +1,0 @@
-C:\Users\yassi\source\repos\projectsdl\projectsdl\MauiApp3\MauiApp3.csproj;x64
